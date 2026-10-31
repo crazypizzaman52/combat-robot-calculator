@@ -1,0 +1,177 @@
+{
+  "motors": [
+    {
+      "id": "belt2812",
+      "name": "Belt Drive 2812",
+      "vendor": "Repeat Robotics",
+      "variants": [
+        [
+          800,
+          8
+        ],
+        [
+          1300,
+          6
+        ],
+        [
+          1800,
+          6
+        ],
+        [
+          2300,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "hub2812",
+      "name": "2812 Beetleweight Battle Ready Hubmotor",
+      "vendor": "Repeat Robotics",
+      "variants": [
+        [
+          800,
+          6
+        ],
+        [
+          1300,
+          6
+        ],
+        [
+          1800,
+          6
+        ]
+      ]
+    },
+    {
+      "id": "hub2207",
+      "name": "2207 Antweight Battle Ready Hubmotor",
+      "vendor": "Repeat Robotics",
+      "variants": [
+        [
+          1200,
+          6
+        ],
+        [
+          1800,
+          4
+        ],
+        [
+          2400,
+          4
+        ]
+      ]
+    },
+    {
+      "id": "direct2004",
+      "name": "2004 Direct Drive Motor",
+      "vendor": "Repeat Robotics",
+      "variants": [
+        [
+          1400,
+          null
+        ],
+        [
+          2800,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "brushless2836",
+      "name": "2836 Brushless Motor",
+      "vendor": "Repeat Robotics",
+      "variants": [
+        [
+          1800,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "repeat2822",
+      "name": "Repeat 2822 Mk3",
+      "vendor": "Repeat Robotics",
+      "variants": [
+        [
+          1100,
+          6
+        ],
+        [
+          1800,
+          4
+        ],
+        [
+          2300,
+          4
+        ]
+      ]
+    },
+    {
+      "id": "ant2305",
+      "name": "Ant Belt Drive 2305",
+      "vendor": "Repeat Robotics",
+      "variants": [
+        [
+          2400,
+          4
+        ]
+      ]
+    },
+    {
+      "id": "rdy5536",
+      "name": "RDY-5536",
+      "vendor": "Just 'Cuz Robotics",
+      "variants": [
+        [
+          900,
+          6
+        ],
+        [
+          1200,
+          4
+        ]
+      ]
+    },
+    {
+      "id": "hybridrdy5735",
+      "name": "Hybrid RDY-5735",
+      "vendor": "Just 'Cuz Robotics",
+      "variants": [
+        [
+          950,
+          6
+        ],
+        [
+          750,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "rdy5022mini",
+      "name": "RDY-5022 Mini",
+      "vendor": "Just 'Cuz Robotics",
+      "variants": [
+        [
+          1700,
+          4
+        ],
+        [
+          1100,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "cherrybombjcr4935",
+      "name": "Cherry Bomb JCR-4935",
+      "vendor": "Just 'Cuz Robotics",
+      "variants": [
+        [
+          1000,
+          6
+        ]
+      ]
+    }
+  ]
+}

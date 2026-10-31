@@ -2,36 +2,28 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Combat Robot Tools — Weapon Tip Speed</title>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:#e8edf5;background:#0b1019}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0}header{border-bottom:1px solid #263244;background:#111a28;padding:20px max(22px,calc((100vw - 1150px)/2))}header b{font-size:21px}header small{display:block;color:#91a3b8;margin-top:4px}main{max-width:1150px;margin:30px auto;padding:0 20px}.grid{display:grid;grid-template-columns:340px minmax(0,1fr);gap:22px}.panel{background:#141e2d;border:1px solid #29394e;border-radius:15px;padding:22px;margin-bottom:20px}h2{font-size:17px;margin:0 0 18px}label{font-size:13px;color:#aebdd0;display:block;margin:14px 0 6px}input,select{width:100%;background:#0d1521;color:#f3f7fd;border:1px solid #3b4b60;border-radius:8px;padding:11px;font-size:15px}input:focus,select:focus{outline:2px solid #4b9cff;outline-offset:1px}input.modified{border-color:#f3b84e;background:#292414}input[type=range]{padding:0;accent-color:#5aa5ff;cursor:pointer}.hint{color:#92a3b8;font-size:12px;line-height:1.55}.muted{color:#91a3b8}.pill{display:inline-block;font-size:11px;border-radius:20px;padding:4px 9px;background:#233449;color:#a8cfff}.warn{color:#ffb45e}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.button{background:#22354c;color:#cce5ff;border:1px solid #42638b;border-radius:8px;padding:8px 11px;cursor:pointer}.button:hover{background:#304b6a}.result{background:#0d1726;border:1px solid #314967;padding:16px;border-radius:11px;margin-top:16px}.result strong{font-size:26px}.scroll{overflow-x:auto}table{border-collapse:separate;border-spacing:0;width:100%;white-space:nowrap}th,td{border-bottom:1px solid #2c3b4f;text-align:center;padding:12px 11px;font-size:13px}th{color:#b6c8de;font-weight:600;background:#19273a}th:first-child,td:first-child{position:sticky;left:0;background:#182536;text-align:left;z-index:1}td:first-child{font-weight:700}td.over{color:#f6a66e}td.unknown{color:#a7b5c8}td.empty{color:#60758d}thead small{display:block;font-weight:400;color:#849bb5;font-size:11px;margin-top:4px}.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:12px;color:#a3b3c6}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;background:#f6a66e}.toggle{display:flex;align-items:center;gap:9px;color:#b7c6d8;font-size:13px;margin-top:16px}.toggle input{width:auto}.readout{background:#0d1521;border:1px solid #29394e;border-radius:8px;padding:10px 11px;color:#d8e5f7;font-size:14px}.ratio-preview{margin-top:12px;padding:11px 13px;border:1px solid #314967;border-radius:9px;background:#0d1726;color:#b8c9dc;font-size:13px}.ratio-preview strong{color:#e7f1ff;font-size:17px}.range-label{display:flex;justify-content:space-between;gap:12px}.range-label span:last-child{color:#e7f1ff;font-weight:600}footer{color:#8b9db4;font-size:12px;line-height:1.7;margin:10px 0 30px}@media(max-width:820px){.grid{grid-template-columns:1fr}.panel{padding:17px}header{padding:18px 20px}}
-.motor-actions{display:flex;gap:8px;align-items:center;margin-top:10px}.delete-button{color:#ffb4a6;border-color:#734a4a}.delete-button:hover{background:#613035}.delete-button:disabled{opacity:.45;cursor:not-allowed}</style></head><body>
-<header><b>⚙ Combat Robot Tools</b><small>Weapon tip speed calculator · prototype v1.1</small></header>
+.compact-select{width:auto;min-width:90px;padding:7px 10px;font-size:13px}.preset-buttons{display:flex;gap:7px;flex-wrap:wrap}.preset-buttons .button{font-size:12px}.motor-actions{display:flex;gap:8px;align-items:center;margin-top:10px}.delete-button{color:#ffb4a6;border-color:#734a4a}.delete-button:hover{background:#613035}.delete-button:disabled{opacity:.45;cursor:not-allowed}</style></head><body>
+<header><b>⚙ Combat Robot Tools</b><small>Weapon tip speed calculator · prototype v1.4</small></header>
 <main><div class="grid"><section>
 <div class="panel"><h2>Motor selection</h2><label for="motor">Motor model</label><select id="motor"></select><div class="motor-actions"><button type="button" class="button delete-button" id="deleteMotor" hidden>Delete selected custom motor</button></div><div class="row" style="margin-top:14px"><span class="pill" id="motorType">COTS preset</span><button class="button" id="newMotor">+ Create custom motor</button></div><div id="presetInfo" class="hint" style="margin-top:12px">Manufacturer preset specifications are read-only. Create a custom motor to enter your own values.</div><div id="variants"></div></div>
 <div class="panel" id="customEditor" hidden><h2 id="editorTitle">Create custom motor</h2><label for="customName">Motor name</label><input id="customName" type="text" maxlength="100" placeholder="e.g. My 2207 motor"><div id="customVariants"></div><button class="button" id="addVariant" style="margin-top:12px">+ Add KV variant</button><p class="hint">Leave maximum LiHV cells blank if the seller did not provide a rating. Custom motors are saved in this browser.</p><div class="row"><button class="button" id="cancelCustom">Cancel</button><button class="button" id="saveCustom">Save motor</button></div><p class="hint warn" id="formError" role="alert"></p></div>
-<div class="panel"><h2>Weapon configuration</h2><label for="diameter">Weapon diameter (mm)</label><input id="diameter" type="number" min="0.1" step="any" value="80"><label>Motor-to-weapon ratio</label><div class="two"><div><label for="ratioInput">Input (motor)</label><input id="ratioInput" type="number" min="0.001" step="any" value="1"></div><div><label for="ratioOutput">Output (weapon)</label><input id="ratioOutput" type="number" min="0.001" step="any" value="1"></div></div><div class="ratio-preview">Ratio: <strong id="ratioPreview">1:1</strong></div><p class="hint">Example: input 2, output 1 means 2 motor revolutions per weapon revolution. Input 1, output 2 is overdrive.</p></div>
+<div class="panel"><h2>Weapon configuration</h2><div class="row"><label for="diameter">Weapon diameter</label><select id="diameterUnit" class="compact-select"><option value="mm">mm</option><option value="in">inches</option></select></div><input id="diameter" type="number" min="0.1" step="any" value="80"><label>Motor-to-weapon ratio</label><div class="two"><div><label for="ratioInput">Input (motor)</label><input id="ratioInput" type="number" min="0.001" step="any" value="1"></div><div><label for="ratioOutput">Output (weapon)</label><input id="ratioOutput" type="number" min="0.001" step="any" value="1"></div></div><div class="ratio-preview">Ratio: <strong id="ratioPreview">1:1</strong></div><p class="hint">Example: input 2, output 1 means 2 motor revolutions per weapon revolution. Input 1, output 2 is overdrive.</p></div>
 </section><section>
 <div class="panel"><h2>Share configuration</h2><p class="hint">Your link includes the selected motor, custom motor specifications, weapon diameter, ratio, and voltage range.</p><button class="button" id="copyLink">Copy shareable link</button><p class="hint" id="shareStatus" role="status"></p></div>
-<div class="panel"><h2>Voltage range</h2><p class="hint">Minimum selects a LiPo cell count; maximum selects a LiHV cell count. The table includes all fully charged LiPo and LiHV voltages within those limits.</p><label class="range-label" for="minRange"><span>Minimum voltage</span><span id="minLabel"></span></label><input type="range" id="minRange" min="2" max="8" step="1" value="2"><label class="range-label" for="maxRange"><span>Maximum voltage</span><span id="maxLabel"></span></label><input type="range" id="maxRange" min="2" max="8" step="1" value="8"><div class="row hint"><span>2S LiPo · 8.40 V</span><span>8S LiHV · 34.80 V</span></div></div>
-<div class="panel"><div class="row"><h2 style="margin:0">Weapon tip speed</h2><span class="pill">mph · theoretical</span></div><p class="hint" id="tableCaption"></p><div class="scroll"><table><thead id="tableHead"></thead><tbody id="tableBody"></tbody></table></div><div class="legend"><span><span class="dot"></span>Above stated maximum voltage</span><span>* No seller voltage rating</span></div></div>
-</section></div><footer>LiPo full-charge voltage: 4.20 V/cell. LiHV full-charge voltage: 4.35 V/cell. Motor maximum voltage is rated LiHV cells × 4.35 V. Unknown ratings remain unknown, not unrestricted. All speeds are ideal no-load values; actual speed will be lower due to load and voltage sag. Motor specifications are user-provided and not independently verified.</footer></main>
+<div class="panel"><h2>Voltage range</h2><p class="hint">Minimum selects a LiPo cell count; maximum selects a LiHV cell count. The table shows both LiPo and LiHV voltages within those limits.</p><label for="voltageMode">Voltage used for calculation</label><select id="voltageMode"><option value="nominal">Nominal (LiPo 3.7 V · LiHV 3.8 V/cell)</option><option value="full">Fully charged (LiPo 4.2 V · LiHV 4.35 V/cell)</option></select><label>Quick weight-class presets</label><div class="preset-buttons"><button type="button" class="button" data-range="2,4">Ant / Fairy · 2–4S</button><button type="button" class="button" data-range="3,8">Beetle · 3–8S</button><button type="button" class="button" data-range="4,16">Larger · 4–16S</button></div><label class="range-label" for="minRange"><span>Minimum voltage</span><span id="minLabel"></span></label><input type="range" id="minRange" min="2" max="16" step="1" value="2"><label class="range-label" for="maxRange"><span>Maximum voltage</span><span id="maxLabel"></span></label><input type="range" id="maxRange" min="2" max="16" step="1" value="8"><div class="row hint"><span id="rangeStart">2S LiPo</span><span id="rangeEnd">16S LiHV</span></div></div>
+<div class="panel"><div class="row"><h2 style="margin:0">Weapon tip speed</h2><select id="speedUnit" class="compact-select" aria-label="Tip speed units"><option value="mph">mph</option><option value="kmh">km/h</option><option value="ms">m/s</option></select></div><p class="hint" id="tableCaption"></p><div class="scroll"><table><thead id="tableHead"></thead><tbody id="tableBody"></tbody></table></div><div class="legend"><span><span class="dot"></span>Above stated maximum voltage</span><span>* No seller voltage rating</span></div></div>
+</section></div><footer>LiPo: 3.70 V nominal / 4.20 V full per cell. LiHV: 3.80 V nominal / 4.35 V full per cell. Motor maximum voltage is rated LiHV cells × 4.35 V. Unknown ratings remain unknown, not unrestricted. All speeds are ideal no-load values; actual speed will be lower due to load and voltage sag. Motor specifications are user-provided and not independently verified.</footer></main>
 <script>
-const motors=[
-{id:'belt2812',name:'Belt Drive 2812',variants:[[800,8],[1300,6],[1800,6],[2300,5]]},
-{id:'hub2812',name:'2812 Beetleweight Battle Ready Hubmotor',variants:[[800,6],[1300,6],[1800,6]]},
-{id:'hub2207',name:'2207 Antweight Battle Ready Hubmotor',variants:[[1200,6],[1800,4],[2400,4]]},
-{id:'direct2004',name:'2004 Direct Drive Motor',variants:[[1400,null],[2800,null]]},
-{id:'brushless2836',name:'2836 Brushless Motor',variants:[[1800,5]]},
-{id:'repeat2822',name:'Repeat 2822 Mk3',variants:[[1100,6],[1800,4],[2300,4]]},
-{id:'ant2305',name:'Ant Belt Drive 2305',variants:[[2400,4]]}
-];
+let motors=[];
 const STORAGE_KEY='combat_robot_custom_motors_v1';
 let customMotors=[];
 try {const data=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');if(Array.isArray(data))customMotors=data.filter(m=>m&&typeof m.id==='string'&&typeof m.name==='string'&&Array.isArray(m.variants));}catch(e){}
 let sharedMotor=null;
 const allMotors=()=>[...motors,...customMotors,...(sharedMotor&&!customMotors.some(m=>m.id===sharedMotor.id)?[sharedMotor]:[])];
 const persist=()=>{try{localStorage.setItem(STORAGE_KEY,JSON.stringify(customMotors))}catch(e){alert('Could not save custom motors in this browser.')}};
-const voltages=Array.from({length:7},(_,i)=>[{cells:i+2,chem:'LiPo',volts:(i+2)*4.2},{cells:i+2,chem:'LiHV',volts:(i+2)*4.35}]).flat().sort((a,b)=>a.volts-b.volts);
+const makeVoltages=()=>{const full=$('voltageMode').value==='full';return Array.from({length:15},(_,i)=>[{cells:i+2,chem:'LiPo',volts:(i+2)*(full?4.2:3.7)},{cells:i+2,chem:'LiHV',volts:(i+2)*(full?4.35:3.8)}]).flat().sort((a,b)=>a.volts-b.volts)};
 const $=id=>document.getElementById(id);const motorSelect=$('motor');let rows=[];let draftVariants=[];
-function populateSelect(selectId){const previous=selectId||motorSelect.value;motorSelect.replaceChildren();const presets=document.createElement('optgroup');presets.label='COTS motors';motors.forEach(m=>presets.appendChild(new Option(m.name,m.id)));motorSelect.appendChild(presets);if(customMotors.length||sharedMotor){const custom=document.createElement('optgroup');custom.label='Custom motors';customMotors.forEach(m=>custom.appendChild(new Option(m.name,m.id)));if(sharedMotor&&!customMotors.some(m=>m.id===sharedMotor.id))custom.appendChild(new Option(sharedMotor.name+' (shared)',sharedMotor.id));motorSelect.appendChild(custom)}motorSelect.value=allMotors().some(m=>m.id===previous)?previous:'repeat2822';updateDeleteButton()}
+function populateSelect(selectId){const previous=selectId||motorSelect.value;motorSelect.replaceChildren();const vendors=[...new Set(motors.map(m=>m.vendor||'Other vendors'))];vendors.forEach(vendor=>{const group=document.createElement('optgroup');group.label=vendor;motors.filter(m=>(m.vendor||'Other vendors')===vendor).forEach(m=>group.appendChild(new Option(m.name,m.id)));motorSelect.appendChild(group)});if(customMotors.length||sharedMotor){const custom=document.createElement('optgroup');custom.label='Custom motors';customMotors.forEach(m=>custom.appendChild(new Option(m.name,m.id)));if(sharedMotor&&!customMotors.some(m=>m.id===sharedMotor.id))custom.appendChild(new Option(sharedMotor.name+' (shared)',sharedMotor.id));motorSelect.appendChild(custom)}motorSelect.value=allMotors().some(m=>m.id===previous)?previous:'repeat2822';updateDeleteButton()}
 function renderVariants(){const m=allMotors().find(x=>x.id===motorSelect.value);if(!m)return;rows=m.variants.map(([kv,cells])=>({kv,cells}));const isCustom=!motors.some(x=>x.id===m.id);$('motorType').textContent=isCustom?'Custom motor':'COTS preset';$('presetInfo').textContent=isCustom?'Your saved custom motor. Select Edit to change its KV options or voltage ratings.':'Manufacturer preset specifications are read-only. Create a custom motor to enter your own values.';const root=$('variants');root.replaceChildren();rows.forEach((r,i)=>{const group=document.createElement('div');group.className='two';group.innerHTML=`<div><label>Variant ${i+1} · KV</label><div class="readout"></div></div><div><label>Max LiHV cells</label><div class="readout"></div></div>`;const cells=group.querySelectorAll('.readout');cells[0].textContent=r.kv;cells[1].textContent=r.cells===null?'Not specified':r.cells+'S';root.appendChild(group)});const edit=$('editCustom');if(edit)edit.remove();if(isCustom){const btn=document.createElement('button');btn.className='button';btn.id='editCustom';btn.textContent='Edit custom motor';btn.style.marginTop='14px';btn.onclick=()=>openEditor(m);root.appendChild(btn)}drawTable();updateDeleteButton()}
 function updateDeleteButton(){
  const id=motorSelect.value;
@@ -60,16 +52,28 @@ function closeEditor(){$('customEditor').hidden=true;editingId=null}
 $('newMotor').onclick=()=>openEditor();$('cancelCustom').onclick=closeEditor;$('addVariant').onclick=()=>{draftVariants.push(['','']);renderDraft()};
 $('saveCustom').onclick=()=>{const name=$('customName').value.trim();if(!name){$('formError').textContent='Enter a motor name.';return}if(!draftVariants.length){$('formError').textContent='Add at least one KV variant.';return}const variants=[];for(const [rawKv,rawCells] of draftVariants){const kv=Number(rawKv),cells=rawCells===''?null:Number(rawCells);if(rawKv===''||!Number.isFinite(kv)||kv<=0||cells!==null&&(!Number.isInteger(cells)||cells<1||cells>30)){$('formError').textContent='Each variant needs a positive KV. Maximum cells must be blank or a whole number from 1 to 30.';return}variants.push([kv,cells])}const id=editingId||'custom-'+Date.now()+'-'+Math.random().toString(36).slice(2,7);const item={id,name,variants};const index=customMotors.findIndex(m=>m.id===id);if(index<0)customMotors.push(item);else customMotors[index]=item;persist();populateSelect(id);closeEditor();renderVariants()};
 
-function drawTable(){const minCells=Number($('minRange').value),maxCells=Number($('maxRange').value);$('minRange').max=maxCells;$('maxRange').min=minCells;$('minLabel').textContent=`${minCells}S LiPo · ${(minCells*4.2).toFixed(2)} V`;$('maxLabel').textContent=`${maxCells}S LiHV · ${(maxCells*4.35).toFixed(2)} V`;const active=voltages.filter(v=>v.volts>=minCells*4.2-1e-8&&v.volts<=maxCells*4.35+1e-8);$('tableCaption').textContent=`${active.length} battery combinations · scroll horizontally to compare`;
-const ri=Number($('ratioInput').value),ro=Number($('ratioOutput').value);$('ratioPreview').textContent=`${$('ratioInput').value||'—'}:${$('ratioOutput').value||'—'}`;
-const head=$('tableHead');head.replaceChildren();const tr=document.createElement('tr');const corner=document.createElement('th');corner.textContent='KV';tr.appendChild(corner);active.forEach(v=>{const th=document.createElement('th');th.textContent=`${v.cells}S ${v.chem}`;const small=document.createElement('small');small.textContent=v.volts.toFixed(2)+' V';th.appendChild(small);tr.appendChild(th)});head.appendChild(tr);
-const body=$('tableBody');body.replaceChildren();const diameter=Number($('diameter').value),ratioInput=Number($('ratioInput').value),ratioOutput=Number($('ratioOutput').value);rows.forEach(r=>{const tr=document.createElement('tr');const kvCell=document.createElement('td');kvCell.textContent=Number.isFinite(r.kv)?r.kv:'—';tr.appendChild(kvCell);active.forEach(v=>{const td=document.createElement('td');const over=r.cells!==null&&v.volts>r.cells*4.35+1e-8;if(!(r.kv>0&&diameter>0&&ratioInput>0&&ratioOutput>0)){td.textContent='—';td.className='empty'}else{const mph=r.kv*v.volts*ratioOutput/ratioInput*Math.PI*(diameter/1000)/60*2.2369362921;td.textContent=Math.round(mph).toLocaleString('en-US')+(r.cells===null?'*':'');if(over)td.className='over';if(r.cells===null){td.className='unknown';td.title='No maximum voltage rating supplied by seller'}}tr.appendChild(td)});body.appendChild(tr)});updateShareUrl()}
+function drawTable(){
+ const minCells=Number($('minRange').value),maxCells=Number($('maxRange').value);
+ $('minRange').max=maxCells;$('maxRange').min=minCells;
+ const full=$('voltageMode').value==='full', lipo=full?4.2:3.7, lihv=full?4.35:3.8;
+ $('minLabel').textContent=`${minCells}S LiPo · ${(minCells*lipo).toFixed(2)} V`;
+ $('maxLabel').textContent=`${maxCells}S LiHV · ${(maxCells*lihv).toFixed(2)} V`;
+ $('rangeStart').textContent=`2S LiPo · ${(2*lipo).toFixed(2)} V`;
+ $('rangeEnd').textContent=`16S LiHV · ${(16*lihv).toFixed(2)} V`;
+ const active=makeVoltages().filter(v=>v.volts>=minCells*lipo-1e-8&&v.volts<=maxCells*lihv+1e-8);
+ $('tableCaption').textContent=`${active.length} battery combinations · ${full?'fully charged':'nominal'} voltage · scroll horizontally to compare`;
+ $('ratioPreview').textContent=`${$('ratioInput').value||'—'}:${$('ratioOutput').value||'—'}`;
+ const head=$('tableHead');head.replaceChildren();const tr=document.createElement('tr');const corner=document.createElement('th');corner.textContent='KV';tr.appendChild(corner);
+ active.forEach(v=>{const th=document.createElement('th');th.textContent=`${v.cells}S ${v.chem}`;const small=document.createElement('small');small.textContent=v.volts.toFixed(2)+' V';th.appendChild(small);tr.appendChild(th)});head.appendChild(tr);
+ const body=$('tableBody');body.replaceChildren();const diameter=Number($('diameter').value)*($('diameterUnit').value==='in'?25.4:1),ratioInput=Number($('ratioInput').value),ratioOutput=Number($('ratioOutput').value),unit=$('speedUnit').value;
+ rows.forEach(r=>{const tr=document.createElement('tr');const kvCell=document.createElement('td');kvCell.textContent=Number.isFinite(r.kv)?r.kv:'—';tr.appendChild(kvCell);active.forEach(v=>{const td=document.createElement('td');const over=r.cells!==null&&v.volts>r.cells*4.35+1e-8;if(!(r.kv>0&&diameter>0&&ratioInput>0&&ratioOutput>0)){td.textContent='—';td.className='empty'}else{const ms=r.kv*v.volts*ratioOutput/ratioInput*Math.PI*(diameter/1000)/60;const result=unit==='mph'?ms*2.2369362921:unit==='kmh'?ms*3.6:ms;td.textContent=Math.round(result).toLocaleString('en-US')+(r.cells===null?'*':'');if(over)td.className='over';if(r.cells===null){td.className='unknown';td.title='No maximum voltage rating supplied by seller'}}tr.appendChild(td)});body.appendChild(tr)});updateShareUrl()
+}
 
 let initialMotorId=null;
 // Compact, readable links. COTS presets use only their stable ID.
 function updateShareUrl(){
  const url=new URL(location.href), q=url.searchParams;
- for(const key of ['config','m','n','k','d','r','l','h'])q.delete(key);
+ for(const key of ['config','m','n','k','d','r','l','h','du','su','vm'])q.delete(key);
  const id=motorSelect.value;
  const m=allMotors().find(x=>x.id===id);
  if(motors.some(x=>x.id===id))q.set('m',id);
@@ -81,7 +85,7 @@ function updateShareUrl(){
  q.set('d',$('diameter').value);
  q.set('r',`${$('ratioInput').value}/${$('ratioOutput').value}`);
  q.set('l',$('minRange').value);
- q.set('h',$('maxRange').value);
+ q.set('h',$('maxRange').value);q.set('du',$('diameterUnit').value);q.set('su',$('speedUnit').value);q.set('vm',$('voltageMode').value);
  try{history.replaceState(null,'',url.pathname+url.search+url.hash)}catch(e){}
 }
 function restoreShareUrl(){
@@ -90,12 +94,12 @@ function restoreShareUrl(){
   const m=q.get('m');
   if(m!==null){
    const d=q.get('d'),r=q.get('r'),l=q.get('l'),h=q.get('h');
-   if(d!==null&&Number.isFinite(Number(d))&&Number(d)>0)$('diameter').value=d;
+   if(d!==null&&Number.isFinite(Number(d))&&Number(d)>0)$('diameter').value=d;const du=q.get('du'),su=q.get('su'),vm=q.get('vm');if(['mm','in'].includes(du))$('diameterUnit').value=du;if(['mph','kmh','ms'].includes(su))$('speedUnit').value=su;if(['nominal','full'].includes(vm))$('voltageMode').value=vm;else if(vm===null)$('voltageMode').value='full';
    if(r!==null){const parts=r.split('/');if(parts.length===2&&parts.every(x=>x.trim()!==''&&Number.isFinite(Number(x))&&Number(x)>0)){
     $('ratioInput').value=parts[0];$('ratioOutput').value=parts[1];
    }}
-   if(l!==null&&Number.isInteger(Number(l))&&Number(l)>=2&&Number(l)<=8)$('minRange').value=l;
-   if(h!==null&&Number.isInteger(Number(h))&&Number(h)>=2&&Number(h)<=8)$('maxRange').value=h;
+   if(l!==null&&Number.isInteger(Number(l))&&Number(l)>=2&&Number(l)<=16)$('minRange').value=l;
+   if(h!==null&&Number.isInteger(Number(h))&&Number(h)>=2&&Number(h)<=16)$('maxRange').value=h;
    if(Number($('minRange').value)>Number($('maxRange').value))$('maxRange').value=$('minRange').value;
    if(motors.some(x=>x.id===m)){initialMotorId=m;return}
    if(m==='custom'){
@@ -157,5 +161,20 @@ $('copyLink').onclick=async()=>{
  }
 };
 
-motorSelect.addEventListener('change',()=>{closeEditor();renderVariants()});['diameter','ratioInput','ratioOutput'].forEach(id=>$(id).addEventListener('input',drawTable));['minRange','maxRange'].forEach(id=>$(id).addEventListener('input',drawTable));restoreShareUrl();populateSelect(sharedMotor?.id||initialMotorId||'repeat2822');renderVariants();
+$('diameterUnit').addEventListener('change',()=>{const d=Number($('diameter').value);if(Number.isFinite(d))$('diameter').value=Number((d*($('diameterUnit').value==='in'?1/25.4:25.4)).toFixed(5));drawTable()});['speedUnit','voltageMode'].forEach(id=>$(id).addEventListener('change',drawTable));document.querySelectorAll('[data-range]').forEach(btn=>btn.addEventListener('click',()=>{const [lo,hi]=btn.dataset.range.split(',');$('minRange').value=lo;$('maxRange').value=hi;drawTable()}));motorSelect.addEventListener('change',()=>{closeEditor();renderVariants()});['diameter','ratioInput','ratioOutput'].forEach(id=>$(id).addEventListener('input',drawTable));['minRange','maxRange'].forEach(id=>$(id).addEventListener('input',drawTable));async function initializeMotorDatabase(){
+ try{
+  const response=await fetch('./motors.json',{cache:'no-cache'});
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  const data=await response.json();
+  if(!Array.isArray(data.motors)||!data.motors.every(m=>typeof m.id==='string'&&typeof m.name==='string'&&Array.isArray(m.variants)))throw new Error('Invalid motor database');
+  motors=data.motors;
+ }catch(error){
+  $('presetInfo').textContent='Could not load motors.json. Run the site on GitHub Pages or a local web server, and ensure motors.json is next to index.html.';
+  $('shareStatus').textContent='Motor database unavailable: '+error.message;
+ }
+ restoreShareUrl();
+ populateSelect(sharedMotor?.id||initialMotorId||'repeat2822');
+ renderVariants();
+}
+initializeMotorDatabase();
 </script></body></html>
