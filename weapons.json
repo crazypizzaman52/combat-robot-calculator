@@ -1,0 +1,642 @@
+{
+  "weapons": [
+    {
+      "id": "repeat-ant-2-50-rr-ant-1",
+      "name": "2.50 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 63.5,
+      "image": "images/2207/2.50 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 2.0484776e-05,
+          "referenceMassG": 44.90564
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 1.1705586e-05,
+          "referenceMassG": 25.85477
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-2-50-rr-ant-2",
+      "name": "2.50 RR Ant 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 63.5,
+      "image": "images/2207/2.50 RR Ant 2.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 1.1705586e-05,
+          "referenceMassG": 24.94758
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 9.071829e-06,
+          "referenceMassG": 10.43262
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-2-75-rr-ant-1",
+      "name": "2.75 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 69.85,
+      "image": "images/2207/2.75 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 2.3703812e-05,
+          "referenceMassG": 45.35924
+        },
+        "titanium": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 1.3461424e-05,
+          "referenceMassG": 25.85477
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-2-75-rr-ant-2",
+      "name": "2.75 RR Ant 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 69.85,
+      "image": "images/2207/2.75 RR Ant 2.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.2004,
+          "referenceMoiKgM2": 1.2583505e-05,
+          "referenceMassG": 24.49399
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.2004,
+          "referenceMoiKgM2": 7.315991e-06,
+          "referenceMassG": 14.06136
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-2-75-rr-ant-3",
+      "name": "2.75 RR Ant 3",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 69.85,
+      "image": "images/2207/2.75 RR Ant 3.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.2004,
+          "referenceMoiKgM2": 1.69731e-05,
+          "referenceMassG": 32.20506
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.2004,
+          "referenceMoiKgM2": 9.657109e-06,
+          "referenceMassG": 18.59729
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-2-75-rr-ant-4",
+      "name": "2.75 RR Ant 4",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 69.85,
+      "image": "images/2207/2.75 RR Ant 4.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.2004,
+          "referenceMoiKgM2": 1.1705586e-05,
+          "referenceMassG": 21.31884
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.2004,
+          "referenceMoiKgM2": 6.730712e-06,
+          "referenceMassG": 12.24699
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-3-00-rr-ant-1",
+      "name": "3.00 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 76.2,
+      "image": "images/2207/3.00 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.0038,
+          "referenceMoiKgM2": 4.8870822e-05,
+          "referenceMassG": 77.5643
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.0038,
+          "referenceMoiKgM2": 2.8093407e-05,
+          "referenceMassG": 44.45205
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-3-00-rr-ant-2",
+      "name": "3.00 RR Ant 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 76.2,
+      "image": "images/2207/3.00 RR Ant 2.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 4.0384272e-05,
+          "referenceMassG": 62.14215
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 2.3118533e-05,
+          "referenceMassG": 35.3802
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-3-25-rr-ant-1",
+      "name": "3.25 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 82.55,
+      "image": "images/2207/3.25 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 3.7750515e-05,
+          "referenceMassG": 55.79186
+        },
+        "titanium": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 2.1655334e-05,
+          "referenceMassG": 31.75147
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-3-50-rr-ant-1",
+      "name": "3.50 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 88.9,
+      "image": "images/2207/3.50 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 4.1262191e-05,
+          "referenceMassG": 55.33827
+        },
+        "titanium": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 2.3703812e-05,
+          "referenceMassG": 31.75147
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-3-75-rr-ant-1",
+      "name": "3.75 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 95.25,
+      "image": "images/2207/3.75 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 6.4380724e-05,
+          "referenceMassG": 81.19303
+        },
+        "titanium": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 3.6872596e-05,
+          "referenceMassG": 46.72001
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-4-00-rr-ant-1",
+      "name": "4.00 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 101.6,
+      "image": "images/2207/4.00 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 9.9497482e-05,
+          "referenceMassG": 99.79032
+        },
+        "titanium": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 5.7064732e-05,
+          "referenceMassG": 57.60623
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-4-25-rr-ant-1",
+      "name": "4.25 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 107.95,
+      "image": "images/2207/4.25 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 4.3895948e-05,
+          "referenceMassG": 45.81283
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 2.516701e-05,
+          "referenceMassG": 26.30836
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-4-50-rr-ant-1",
+      "name": "4.50 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 114.3,
+      "image": "images/2207/4.50 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 5.09193e-05,
+          "referenceMassG": 46.26642
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 2.9263965e-05,
+          "referenceMassG": 26.76195
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-4-75-rr-ant-1",
+      "name": "4.75 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 120.65,
+      "image": "images/2207/4.75 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 5.6479453e-05,
+          "referenceMassG": 46.72001
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 3.2483002e-05,
+          "referenceMassG": 26.76195
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-5-00-rr-ant-1",
+      "name": "5.00 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 127.0,
+      "image": "images/2207/5.00 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 0.000112958906,
+          "referenceMassG": 92.07925
+        },
+        "titanium": {
+          "referenceThicknessMm": 4.7752,
+          "referenceMoiKgM2": 6.4966003e-05,
+          "referenceMassG": 53.07031
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-5-25-rr-ant-1",
+      "name": "5.25 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 133.35,
+      "image": "images/2207/5.25 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 9.9790122e-05,
+          "referenceMassG": 70.76041
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 5.7357372e-05,
+          "referenceMassG": 40.36972
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-5-50-rr-ant-1",
+      "name": "5.50 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 139.7,
+      "image": "images/2207/5.50 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 0.000189045216,
+          "referenceMassG": 104.32625
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 0.000108569311,
+          "referenceMassG": 59.87419
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-6-00-rr-ant-1",
+      "name": "6.00 RR Ant 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 152.4,
+      "image": "images/2207/6.00 RR Ant 1.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 0.000153635818,
+          "referenceMassG": 74.38915
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 8.8377175e-05,
+          "referenceMassG": 42.63768
+        }
+      }
+    },
+    {
+      "id": "repeat-ant-6-00-rr-ant-2",
+      "name": "6.00 RR Ant 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 152.4,
+      "image": "images/2207/6.00 RR Ant 2.png",
+      "compatibleHubs": [
+        "hub2207"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 0.000177924909,
+          "referenceMassG": 88.9041
+        },
+        "titanium": {
+          "referenceThicknessMm": 3.175,
+          "referenceMoiKgM2": 0.000102131239,
+          "referenceMassG": 50.80235
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-4-00-rr-beetle-1",
+      "name": "4.00 RR Beetle 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 101.6,
+      "image": "images/2812/4.00 RR Beetle 1.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000136955358,
+          "referenceMassG": 127.45946
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 7.8720067e-05,
+          "referenceMassG": 73.02837
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-4-00-rr-beetle-2",
+      "name": "4.00 RR Beetle 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 101.6,
+      "image": "images/2812/4.00 RR Beetle 2.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000123201294,
+          "referenceMassG": 112.9445
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 7.0818796e-05,
+          "referenceMassG": 64.86371
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-5-00-rr-beetle-1",
+      "name": "5.00 RR Beetle 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 127.0,
+      "image": "images/2812/5.00 RR Beetle 1.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 6.35,
+          "referenceMoiKgM2": 0.000299370365,
+          "referenceMassG": 222.26026
+        },
+        "titanium": {
+          "referenceThicknessMm": 6.35,
+          "referenceMoiKgM2": 0.000172072116,
+          "referenceMassG": 127.91305
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-5-00-rr-beetle-2",
+      "name": "5.00 RR Beetle 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 127.0,
+      "image": "images/2812/5.00 RR Beetle 2.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000218601821,
+          "referenceMassG": 145.14956
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000125542411,
+          "referenceMassG": 83.461
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-6-00-rr-beetle-1",
+      "name": "6.00 RR Beetle 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 152.4,
+      "image": "images/2812/6.00 RR Beetle 1.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.0038,
+          "referenceMoiKgM2": 0.000448031309,
+          "referenceMassG": 214.0956
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.0038,
+          "referenceMoiKgM2": 0.000257522895,
+          "referenceMassG": 122.92353
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-6-00-rr-beetle-2",
+      "name": "6.00 RR Beetle 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 152.4,
+      "image": "images/2812/6.00 RR Beetle 2.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000290883816,
+          "referenceMassG": 151.04626
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000167097242,
+          "referenceMassG": 86.63614
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-7-00-rr-beetle-1",
+      "name": "7.00 RR Beetle 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 177.8,
+      "image": "images/2812/7.00 RR Beetle 1.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000611909515,
+          "referenceMassG": 219.53871
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000351752863,
+          "referenceMassG": 126.09868
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-7-00-rr-beetle-2",
+      "name": "7.00 RR Beetle 2",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 177.8,
+      "image": "images/2812/7.00 RR Beetle 2.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000576207478,
+          "referenceMassG": 230.42492
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000331268088,
+          "referenceMassG": 132.44897
+        }
+      }
+    },
+    {
+      "id": "repeat-beetle-8-00-rr-beetle-1",
+      "name": "8.00 RR Beetle 1",
+      "vendor": "Repeat Robotics",
+      "diameterMm": 203.2,
+      "image": "images/2812/8.00 RR Beetle 1.png",
+      "compatibleHubs": [
+        "hub2812"
+      ],
+      "materials": {
+        "steel": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.001059648185,
+          "referenceMassG": 290.75271
+        },
+        "titanium": {
+          "referenceThicknessMm": 5.9944,
+          "referenceMoiKgM2": 0.000608690479,
+          "referenceMassG": 166.92199
+        }
+      }
+    }
+  ]
+}
